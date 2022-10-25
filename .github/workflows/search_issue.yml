@@ -36,4 +36,4 @@ jobs:
           subject: Search Issue Created
           # Optional plain body:
           body: |
-            Issue \"<a href=\"${{github.event.issue.url}}\">#${{github.event.issue.number}}</a>\" has been created.
+            Issue <a href="${{github.event.issue.url}}">#${{github.event.issue.number}}</a> has been created.
