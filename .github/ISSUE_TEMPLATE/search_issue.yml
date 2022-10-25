@@ -17,5 +17,5 @@ body:
     id: searchterms
     attributes:
       label: What search terms have you tried?
-      description: comma separated values: \"search term 1, search term 2\"
+      description: comma separated values\: \"search term 1, search term 2\"
       placeholder: custom camera, default camera, external camera
