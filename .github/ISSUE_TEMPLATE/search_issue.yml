@@ -1,9 +1,19 @@
-name: Help Finding Page
+name: Agora Docs Search Issue
 description: Describe what page you're trying to find, and provide as much details as possible.
 title: 'Issue Finding: <Details>'
 labels: ['Search Help']
 assignees: embkim, ghuddy, leeshyan, timin1970, oakmalavika
 body:
+  - type: dropdown
+    id: searchtype
+    attributes:
+      label: What type of issue are you facing with search?
+      multiple: true
+      options:
+        - Missing search result
+        - Too many search results
+        - Search results are not useful
+        - Other (please specify below)
   - type: textarea
     id: desc
     attributes:
@@ -13,9 +23,22 @@ body:
         I'm trying to find how to add a custom camera source
     validations:
       required: true
-  - type: textarea
+  - type: input
     id: searchterms
     attributes:
       label: What search terms have you tried?
       description: "comma separated values: 'search term 1, search term 2'"
       placeholder: custom camera, default camera, external camera
+    validations:
+      required: true
+  - type: input
+    id: desiredlink
+    attributes:
+      label: Where should the search lead you?
+      description: If known, please add a link to the page you want to see in the search results.
+      placeholder: https://docs.agora.io/...
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screen Shots + Other
+      description: Add in any more information and/or screenshots of what you currently see when using search.
