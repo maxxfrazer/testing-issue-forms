@@ -36,4 +36,6 @@ jobs:
           subject: Search Issue Created
           # Optional plain body:
           body: |
-            Issue <a href="${{github.event.issue.url}}">#${{github.event.issue.number}}</a> has been created.
+            Issue [#${{github.event.issue.number}}](${{github.event.issue.url}}) has been created.
+          # Optional converting Markdown to HTML (set content_type to text/html too):
+          convert_markdown: true
