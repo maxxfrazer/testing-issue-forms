@@ -1,0 +1,21 @@
+name: Help Finding Page
+description: Describe what page you're trying to find, and provide as much details as possible.
+title: 'Issue Finding: <Details>'
+labels: ['Search Help']
+assignees: embkim, ghuddy, leeshyan, timin1970, oakmalavika
+body:
+  - type: textarea
+    id: desc
+    attributes:
+      label: What are you trying to find?
+      description: Please describe what you're trying to find on the documentation site.
+      placeholder: |
+        I'm trying to find how to add a custom camera source
+    validations:
+      required: true
+  - type: textarea
+    id: searchterms
+    attributes:
+      label: What search terms have you tried?
+      description: comma separated values: "search term 1, search term 2"
+      placeholder: custom camera, default camera, external camera
