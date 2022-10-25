@@ -29,12 +29,11 @@ jobs:
           # Optional (recommended) mail server password:
           password: ${{secrets.MAIL_PASSWORD_MAX}}
           # Required recipients' addresses:
-          to: maxxfrazer@gmail.com
+          to: ${{secrets.MAIL_RECIPIENTS}}
           # Required sender full name (address can be skipped):
-          from: Agora GitHub Notifications # <user@example.com>
+          from: Agora GitHub Notifications
           # Required mail subject:
-          subject: Github Actions Issue Created
+          subject: Search Issue Created
           # Optional plain body:
-          body: Issue [${{github.event.issue.id}}](${{github.event.issue.url}}) has been created.
-          # Optional converting Markdown to HTML (set content_type to text/html too):
-          convert_markdown: true
+          body: |
+            Issue \"<a href=\"${{github.event.issue.url}}\">#${{github.event.issue.number}}</a>\" has been created.
