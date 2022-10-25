@@ -2,7 +2,12 @@ name: Agora Docs Search Issue
 description: Describe what page you're trying to find, and provide as much details as possible.
 title: 'Issue Finding: <Details>'
 labels: ['Search Help']
-assignees: embkim, ghuddy, leeshyan, timin1970, oakmalavika
+assignees:
+  - embkim
+  - ghuddy
+  - leeshyan
+  - timin1970
+  - oakmalavika
 body:
   - type: dropdown
     id: searchtype
